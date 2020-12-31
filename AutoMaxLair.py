@@ -30,7 +30,22 @@ boss_matchup_LUT_path = config['pokemon_data_paths']['Boss_Matchup_LUT']
 rental_matchup_LUT_path = config['pokemon_data_paths']['Rental_Matchup_LUT']
 rental_pokemon_scores_path = config['pokemon_data_paths']['Rental_Pokemon_Scores']
 
+#Text strings on Max Lair Area
+detect_text = ('Adelante',          #Battle
+               'mis objetos',       #Backpacker
+               'préstamo',          #Scientist
+               'quieres seguir')    #Path
 
+#Text strings on Battle screen
+battle_text = ('LUCHAR',            #Fight
+               'ANIMAR',            #Cheer up
+               'Atrapar',           #Catch
+               'despedidos',        #Blown away
+               'rodea a',           #Dynamax on you
+               'ya puede usar',     #Dynamax on others
+               'aumenta de intensidad', #First kill
+               'aumenta aún más',       #Second kill
+               'casi imposible')        #Third kill
 
 def join(inst):
     """Join a Dynamax Adventure and choose a Pokemon."""
@@ -70,19 +85,19 @@ def detect(inst) -> str:
     :type inst: MaxLairInstance
     """
     text = inst.read_text(inst.get_frame(), ((0, 0.6), (1, 1)), invert=True)
-    if 'Fight' in text or 'appeared' in text:
+    if str(detect_text[0]) in text:
         # Battle has started and the move selection screen is up
         inst.log('Battle starting...')
         return 'battle'
-    elif 'backpacker' in text:
+    elif str(detect_text[1]) in text:
         # Backpacker encountered so choose an item
         inst.log('Backpacker encountered...')
         return 'backpacker'
-    elif 'swapping' in text:
+    elif str(detect_text[2]) in text:
         # Scientist appeared to deal with that
         inst.log('Scientist encountered...')
         return 'scientist'
-    elif 'path' in text:
+    elif str(detect_text[3]) in text:
         # Fork in the path appeared to choose where to go
         inst.log('Choosing a path...')
         return 'path'
@@ -95,31 +110,37 @@ def battle(inst) -> str:
     while True:
         text = inst.read_text(inst.get_frame(), ((0, 0.6), (1, 1)), invert=True)  # Read text from the bottom section of the screen
         
-        if 'Catch' in text:
+        if str(battle_text[2]) in text:
             inst.log('Catching boss...')
             inst.reset_stage()
             return 'catch'
-        elif 'blown' in text:
+        elif str(battle_text[3]) in text:
             inst.log('You lose :(. Quitting...')
             inst.reset_stage()
             inst.push_buttons((b'0', 7))
             return 'select_pokemon'  # Go to quit sequence
-        elif 'gathered around' in text:
+        elif str(battle_text[4]) in text:
             inst.dynamax_available = True
             inst.pokemon.dynamax = False
             inst.dmax_timer = -1
-        elif 'can dynamax now' in text.lower():
+        elif str(battle_text[5]) in text.lower():
             inst.dynamax_available = False
             inst.pokemon.dynamax = False
             inst.dmax_timer = -1
-        elif 'Cheer On' in text:
+        elif str(battle_text[6]) in text.lower():
+            inst.lives = 3
+        elif str(battle_text[7]) in text.lower():
+            inst.lives = 2
+        elif str(battle_text[8]) in text.lower():
+            inst.lives = 1
+        elif str(battle_text[1]) in text:
             inst.dmax_timer = -1
             inst.dynamax_available = False
             if inst.pokemon.dynamax:
                 inst.pokemon.dynamax = False
                 inst.move_index = 0
             inst.push_buttons((b'a', 1))
-        elif 'Fight' in text:
+        elif str(battle_text[0]) in text:
             # Detect or infer opponent
             if inst.opponent is None:
                 if inst.num_caught == 3:
@@ -161,7 +182,7 @@ def battle(inst) -> str:
                 inst.pokemon.dynamax = True
                 inst.dynamax_available = False
             move = inst.pokemon.max_moves[best_move_index] if inst.pokemon.dynamax else inst.pokemon.moves[best_move_index]
-            inst.log('Best move against ' + inst.opponent.name + ': ' + move.name + ' (index ' + str(best_move_index) + ')')
+            inst.log('BMA ' + inst.opponent.name + ': ' + move.name + ' (s:' + str(best_move_index) + ')')
             inst.move_index %= 4  # Loop index back to zero if it exceeds 3
             for _ in range((best_move_index - inst.move_index + 4) % 4):
                 inst.push_buttons((b'v', 1))
@@ -175,7 +196,7 @@ def catch(inst):
     """Catch each boss after defeating it."""
     inst.push_buttons((b'a', 1.5))
     while inst.get_target_ball() != 'DEFAULT' and inst.get_target_ball() not in inst.check_ball():
-        inst.push_buttons((b'<', 1.5))
+        inst.push_buttons((b'>', 1.5))
     inst.push_buttons((b'a', 30))
     inst.record_ball_use()
     if inst.num_caught < 4:
@@ -230,14 +251,15 @@ def select_pokemon(inst):
     reset_game = False
     for i in range(inst.num_caught):
         if inst.check_shiny():
-            inst.log('******************************\n\nShiny found!\n\n******************************')
+            inst.log('\n******************************\n\nShiny found!\n\n******************************')
             inst.shinies_found += 1
-            inst.display_results(log=True)
             if inst.num_caught == 4 and i == 0:
-                inst.display_results(log=True)
                 inst.push_buttons((b'b', 3))
+                inst.display_results(log=True)
                 return 'done'  # End whenever a shiny legendary is found
             else:
+                inst.push_buttons((b'b', 3))
+                inst.display_results(log=False,screenshot=True)
                 take_pokemon = True
                 break
         elif inst.num_caught == 4 and 'ball saver' in inst.mode.lower():
@@ -254,7 +276,8 @@ def select_pokemon(inst):
     # Wrap up at the end of the run        
     if not reset_game:
         if take_pokemon:
-            inst.push_buttons((b'b', 3), (b'a', 1), (b'a', 1), (b'a', 1), (b'a', 1.5), (b'a', 3), (b'b', 2), (b'b', 10), (b'a', 2))
+            #inst.push_buttons((b'b', 3), (b'a', 1), (b'a', 1), (b'a', 1), (b'a', 1.5), (b'a', 3), (b'b', 2), (b'b', 10), (b'a', 2))
+            inst.push_buttons((b'a', 1), (b'a', 1), (b'a', 1), (b'a', 1.5), (b'a', 3), (b'b', 2), (b'b', 10), (b'a', 2))
         else:
             inst.push_buttons((b'b', 3), (b'b', 1), (b'a', 2), (b'a', 2), (b'a', 11), (b'a', 1), (b'a', 2))
         inst.consecutive_resets = 0
@@ -269,7 +292,9 @@ def select_pokemon(inst):
         inst.legendary_balls += 1 if inst.num_caught == 4 else 0
         inst.consecutive_resets += 1
         inst.dynite_ore -= inst.calculate_ore_cost(inst.consecutive_resets)
-        inst.push_buttons((b'h', 2), (b'x', 2), (b'a', 3), (b'a', 2), (b'a', 20), (b'a', 10), (b'a', 3), (b'b', 3), (b'b', 3), (b'b', 3), (b'b', 3), (b'a', 3), (b'b', 3))
+        # Spanish text require additional "B" clicks to pay ore
+        #inst.push_buttons((b'h', 2), (b'x', 2), (b'a', 3), (b'a', 2), (b'a', 20), (b'a', 10), (b'a', 3), (b'b', 3), (b'b', 3), (b'b', 3), (b'b', 3), (b'a', 3), (b'b', 3))
+        inst.push_buttons((b'h', 2), (b'x', 2), (b'a', 3), (b'a', 2), (b'a', 20), (b'a', 10), (b'a', 3), (b'b', 3), (b'b', 3), (b'b', 3), (b'b', 3), (b'b', 3), (b'a', 3), (b'b', 3), (b'b', 3))
     inst.wins += 1 if inst.num_caught == 4 else 0
     inst.runs += 1
     inst.reset_run()

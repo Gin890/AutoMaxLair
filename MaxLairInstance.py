@@ -41,6 +41,11 @@ class MaxLairInstance():
         self.shinies_found = 0
         self.consecutive_resets = 0
 
+        #Additional variables
+        self.shot = 0
+        self.lives = 4
+        self.caught_total = 0
+
         # Video capture and serial communication objects
         self.cap = cap
         self.cap.set(3, 1280)
@@ -51,29 +56,30 @@ class MaxLairInstance():
 
         # Rectangles for checking shininess and reading specific text
         # Shiny star rectangle
-        self.shiny_rect = ((0.075,0.53), (0.105,0.58))
+        self.shiny_rect = ((0.09,0.535), (0.12,0.575))
         # Selectable Pokemon names rectangles
-        self.sel_rect_1 = ((0.485,0.28), (0.60,0.33))
-        self.sel_rect_2 = ((0.485,0.54), (0.60,0.59))
-        self.sel_rect_3 = ((0.485,0.80), (0.60,0.855))
-        self.sel_rect_4 = ((0.485,0.59), (0.60,0.645))
+        self.sel_rect_1 = ((0.485,0.295), (0.61,0.335))
+        self.sel_rect_2 = ((0.485,0.545), (0.61,0.585))
+        self.sel_rect_3 = ((0.485,0.790), (0.61,0.830))
+        self.sel_rect_4 = ((0.485,0.590), (0.61,0.635))
         # In-battle Pokemon name & type rectangles
-        self.sel_rect_5 = ((0.195,0.11), (0.39,0.16))
-        self.type_rect_1 = ((0.24,0.17), (0.31,0.215))
-        self.type_rect_2 = ((0.35,0.17), (0.425,0.214))
+        self.sel_rect_5 = ((0.205,0.125), (0.400,0.185))
+        self.type_rect_1 = ((0.250,0.190), (0.325,0.230))
+        self.type_rect_2 = ((0.355,0.190), (0.430,0.230))
         # Selectable Pokemon abilities rectangles
-        self.abil_rect_1 = ((0.485,0.33), (0.60,0.39))
-        self.abil_rect_2 = ((0.485,0.59), (0.60,0.65))
-        self.abil_rect_3 = ((0.485,0.85), (0.60,0.91))
-        self.abil_rect_4 = ((0.485,0.645), (0.60,0.69))
+        self.abil_rect_1 = ((0.485,0.340), (0.61,0.385))
+        self.abil_rect_2 = ((0.485,0.590), (0.61,0.635))
+        self.abil_rect_3 = ((0.485,0.835), (0.61,0.880))
+        self.abil_rect_4 = ((0.485,0.635), (0.61,0.690))
         # Poke ball rectangle
-        self.ball_rect = ((0.69,0.63), (0.88,0.68))
+        self.ball_rect = ((0.69,0.620), (0.88,0.665))
 
 
     def reset_run(self) -> None:
         """Reset in preparation for a new Dynamax Adventure."""
         self.pokemon = None
         self.HP = 1 # 1 = 100%
+        self.lives = 4
         self.num_caught = 0
         self.reset_stage()
         # Load precalculated resources for choosing Pokemon and moves
@@ -142,7 +148,7 @@ class MaxLairInstance():
                   section: Tuple[Tuple[float, float], Tuple[float, float]]=((0,0),(1,1)),
                   threshold: bool=True,
                   invert: bool=False,
-                  language: str='eng',
+                  language: str='spa',
                   segmentation_mode: str='--psm 11') -> str:
         """Read text from a section (default entirety) of an image using Tesseract."""
         # Image is optionally supplied, usually when multiple text areas must be read so the image only needs to be fetched once
@@ -192,7 +198,7 @@ class MaxLairInstance():
         if match_value > len(text)/3:
             print('WARNING: could not find a good match for Pokemon: "'+text+'"')
             pass
-        print('OCRed Pokemon '+text+' matched to rental Pokemon '+matched_text+' with distance of '+str(match_value)) # DEBUG
+        print('OCRed Pokemon:\t'+text+'\nMatched to:\t'+matched_text+' @ '+str(match_value)) # DEBUG
         return best_match
 
     def read_selectable_pokemon(self,
@@ -250,7 +256,7 @@ class MaxLairInstance():
 
     def check_ball(self) -> str:
         """Detect the currently selected Poke Ball during the catch phase of the game."""
-        return self.read_text(self.get_frame(), self.ball_rect, threshold=False, invert=True, language='eng', segmentation_mode='--psm 8').strip()
+        return self.read_text(self.get_frame(), self.ball_rect, threshold=False, invert=True, language='spa', segmentation_mode='--psm 8').strip()
         
     def record_ball_use(self) -> None:
         """Decrement the number of balls in the inventory and increment the number of pokemon caught."""
@@ -262,6 +268,7 @@ class MaxLairInstance():
         else:
             self.legendary_balls -= 1
         self.num_caught += 1
+        self.caught_total += 1
 
     def check_sufficient_balls(self) -> bool:
         """Calculate whether sufficient balls remain for another run."""
@@ -292,33 +299,57 @@ class MaxLairInstance():
             file.write(datetime.now().strftime('%Y-%m-%d %H:%M:%S')+'\t'+string+'\n')
         print(string)
         
-    def display_results(self, log=False):
+    def display_results(self, log=False, screenshot=False):
         """Display video from the Switch alongside some annotations describing the run sequence."""
         # Calculate some statistics for display        
-        win_percent = None if self.runs == 0 else round(100 * self.wins / self.runs)
-        time_per_run = None if self.runs == 0 else (datetime.now() - self.start_date) / self.runs
+        win_percent = 0 if self.runs == 0 else 100 * self.wins / self.runs
+        time_per_run = 0 if self.runs == 0 else (datetime.now() - self.start_date) / self.runs
+        shiny_percent = 0 if self.shinies_found == 0 else 100 * self.shinies_found / self.caught_total
 
         # Expand the image with blank space for writing results
         frame = cv2.copyMakeBorder(self.get_frame(stage=self.stage), 0, 0, 0, 200, cv2.BORDER_CONSTANT)
         width = frame.shape[1]
 
         # Construct arrays of text and values to display
-        labels = (
-        'Run #', 'Stage: ', 'Base balls: ', 'Legendary balls: ', 'Pokemon caught: ', 'Pokemon: ',
-        'Opponent: ', 'Win percentage: ', 'Time per run: ', 'Shinies found: ', 'Dynite Ore: ')
-        values = (str(self.runs + 1), self.stage, str(self.base_balls), str(self.legendary_balls),
-                str(self.num_caught), str(self.pokemon), str(self.opponent), str(win_percent) + '%', str(time_per_run),
-                str(self.shinies_found), str(self.dynite_ore))
+        labels = ('Run #',
+                  'Stage: ',
+                  'Battle :',
+                  'Lives: ',
+                  'Pokemon: ',
+                  'Opponent: ',
+                  'Wins: ',
+                  'Time per run: ',
+                  'Pokemon caught: ',
+                  'Shinies found: ',
+                  'Base balls: ',
+                  'Legendary balls: ',
+                  'Dynite Ore: ')
+        values = (str(self.runs + 1)+' : '+str(self.boss),
+                  self.stage,
+                  str(self.num_caught + 1),
+                  str(self.lives),
+                  str(self.pokemon),
+                  str(self.opponent),
+                  str(self.wins)+' (%0.2f'%win_percent+' %)',
+                  str(time_per_run),
+                  str(self.caught_total),
+                  str(self.shinies_found)+' (%0.2f'%shiny_percent+' %)',
+                  str(self.base_balls),
+                  str(self.legendary_balls),
+                  str(self.dynite_ore))
+
 
         for i in range(len(labels)):
-            cv2.putText(frame, labels[i] + values[i], (width - 195, 25 + 25 * i), cv2.FONT_HERSHEY_PLAIN, 1,
-                        (255, 255, 255), 2, cv2.LINE_AA)
+            cv2.putText(frame, labels[i] + values[i], (width - 195, 25 + 25 * i), cv2.FONT_HERSHEY_PLAIN, 0.8,
+                        (255, 255, 255), 1, cv2.LINE_AA)
             if log:
                 self.log(labels[i] + values[i])
 
         # Display
         cv2.imshow('Output', frame)
-        if log:
+        if log or screenshot:
             # Save a copy of the final image
-            cv2.imwrite(self.filename[:-8] + '_cap.png', frame)
+            cv2.imwrite(self.filename[:-8] + '_cap_'+str(self.shot)+'.png', frame)
+            self.shot += 1
+            screenshot = False
 

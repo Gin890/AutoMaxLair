@@ -170,7 +170,7 @@ with open('Pokemon_Data/Boss_Pokemon.txt', newline='\n') as file:
         boss_pokemon[name] = Pokemon(name,ability,pokemon_types[name],pokemon_base_stats[name],moves,max_moves,level)
 print('Read and processed boss Pokemon file.')
 
-boss_matchup_LUT = {}
+'''boss_matchup_LUT = {}
 for key, attacker in rental_pokemon.items():
     matchups = {}
     for key, defender in boss_pokemon.items():
@@ -195,7 +195,7 @@ for key, attacker in rental_pokemon.items():
 
 for key in rental_pokemon_scores:
     rental_pokemon_scores[key] /= (total_score/len(rental_pokemon))
-print('Computed rental matchup LUT.')
+print('Computed rental matchup LUT.')'''
     
     
 
@@ -203,11 +203,11 @@ with open('Pokemon_Data/Rental_Pokemon.pickle', 'wb') as file:
     pickle.dump(rental_pokemon, file)
 with open('Pokemon_Data/Boss_Pokemon.pickle', 'wb') as file:
     pickle.dump(boss_pokemon, file)
-with open('Pokemon_Data/Boss_Matchup_LUT.pickle', 'wb') as file:
+'''with open('Pokemon_Data/Boss_Matchup_LUT.pickle', 'wb') as file:
     pickle.dump(boss_matchup_LUT, file)
 with open('Pokemon_Data/Rental_Matchup_LUT.pickle', 'wb') as file:
     pickle.dump(rental_matchup_LUT, file)
 with open('Pokemon_Data/Rental_Pokemon_Scores.pickle', 'wb') as file:
-    pickle.dump(rental_pokemon_scores, file)
+    pickle.dump(rental_pokemon_scores, file)'''
 print('Finished packaging Pokemon!')
 
