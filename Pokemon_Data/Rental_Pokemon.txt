@@ -1,6 +1,6 @@
 Ivysaur
 
-Chlorophyll
+Clorofila
 Level 65
 Attacks:
 Grass Pledge
@@ -10,7 +10,7 @@ Sludge Bomb
 
 Charmeleon
 
-Solar Power
+Poder Solar
 Level 65
 Attacks:
 Fire Pledge
@@ -20,7 +20,7 @@ Inferno
 
 Wartortle
 
-Rain Dish
+Cura Lluvia
 Level 65
 Attacks:
 Water Pledge
@@ -30,7 +30,7 @@ Hydro Pump
 
 Butterfree
 
-Tinted Lens
+Cromolente
 Level 65
 Attacks:
 Pollen Puff
@@ -40,7 +40,7 @@ Giga Drain
 
 Raichu
 
-Lightning Rod
+Pararrayos
 Level 65
 Attacks:
 Rising Voltage
@@ -50,7 +50,7 @@ Focus Blast
 
 Raichu (Alolan Form)
 
-Surge Surfer
+Cola Surf
 Level 65
 Attacks:
 Thunderbolt
@@ -60,7 +60,7 @@ Round
 
 Sandslash
 
-Sand Veil
+Velo Arena
 Level 65
 Attacks:
 Crush Claw
@@ -70,7 +70,7 @@ Leech Life
 
 Sandslash (Alolan Form)
 
-Snow Cloak
+Manto Niveo
 Level 65
 Attacks:
 Avalanche
@@ -80,7 +80,7 @@ Swords Dance
 
 Nidoqueen
 
-Poison Point
+Punto Toxico
 Level 65
 Attacks:
 Scorching Sands
@@ -90,7 +90,7 @@ Shadow Ball
 
 Nidoking
 
-Rivalry
+Rivalidad
 Level 65
 Attacks:
 High Horsepower
@@ -100,7 +100,7 @@ Thunder Punch
 
 Clefairy
 
-Friend Guard
+Compiescolta
 Level 65
 Attacks:
 Life Dew
@@ -110,7 +110,7 @@ Reflect
 
 Clefable
 
-Magic Guard
+Muro Magico
 Level 65
 Attacks:
 Meteor Beam
@@ -120,7 +120,7 @@ Cosmic Power
 
 Jigglypuff
 
-Friend Guard
+Compiescolta
 Level 65
 Attacks:
 Substitute
@@ -130,7 +130,7 @@ Draining Kiss
 
 Wigglytuff
 
-Competitive
+Tenacidad
 Level 65
 Attacks:
 Dazzling Gleam
@@ -140,7 +140,7 @@ Sweet Kiss
 
 Gloom
 
-Chlorophyll
+Clorofila
 Level 65
 Attacks:
 Venoshock
@@ -150,7 +150,7 @@ Stun Spore
 
 Vileplume
 
-Chlorophyll
+Clorofila
 Level 65
 Attacks:
 Giga Drain
@@ -160,7 +160,7 @@ Pollen Puff
 
 Dugtrio
 
-Sand Force
+Poder Arena
 Level 65
 Attacks:
 High Horsepower
@@ -170,7 +170,7 @@ Rock Slide
 
 Dugtrio (Alolan Form)
 
-Sand Veil
+Velo Arena
 Level 65
 Attacks:
 Iron Head
@@ -180,7 +180,7 @@ Screech
 
 Persian
 
-Technician
+Experto
 Level 65
 Attacks:
 Facade
@@ -190,7 +190,7 @@ Round
 
 Persian (Alolan Form)
 
-Fur Coat
+Pelaje Recio
 Level 65
 Attacks:
 Assurance
@@ -200,7 +200,7 @@ Quash
 
 Golduck
 
-Swift Swim
+Nado Rapido
 Level 65
 Attacks:
 Aqua Jet
@@ -210,7 +210,7 @@ Brine
 
 Poliwrath
 
-Water Absorb
+Absorbe Agua
 Level 65
 Attacks:
 Drain Punch
@@ -220,7 +220,7 @@ Liquidation
 
 Kadabra
 
-Magic Guard
+Muro Magico
 Level 65
 Attacks:
 Psyshock
@@ -230,7 +230,7 @@ Dazzling Gleam
 
 Machoke
 
-No Guard
+Indefenso
 Level 65
 Attacks:
 Dynamic Punch
@@ -240,7 +240,7 @@ Coaching
 
 Tentacruel
 
-Clear Body
+Cuerpo Puro
 Level 65
 Attacks:
 Water Pulse
@@ -250,7 +250,7 @@ Swords Dance
 
 Slowbro
 
-Own Tempo
+Ritmo Propio
 Level 65
 Attacks:
 Expanding Force
@@ -260,7 +260,7 @@ Psyshock
 
 Magneton
 
-Analytic
+Calculo Final
 Level 65
 Attacks:
 Electro Ball
@@ -270,7 +270,7 @@ Light Screen
 
 Haunter
 
-Levitate
+Levitacion
 Level 65
 Attacks:
 Hex
@@ -280,7 +280,7 @@ Energy Ball
 
 Kingler
 
-Hyper Cutter
+Corte Fuerte
 Level 65
 Attacks:
 Crabhammer
@@ -290,7 +290,7 @@ Superpower
 
 Exeggutor
 
-Harvest
+Cosecha
 Level 65
 Attacks:
 Psycho Cut
@@ -300,7 +300,7 @@ Terrain Pulse
 
 Marowak
 
-Battle Armor
+Armadura Batalla
 Level 65
 Attacks:
 Bonemerang
@@ -310,7 +310,7 @@ Screech
 
 Marowak (Alolan Form)
 
-Rock Head
+Cabeza Roca
 Level 65
 Attacks:
 Flare Blitz
@@ -320,7 +320,7 @@ Iron Head
 
 Hitmonlee
 
-Limber
+Flexibilidad
 Level 65
 Attacks:
 Close Combat
@@ -330,7 +330,7 @@ Low Sweep
 
 Hitmonchan
 
-Iron Fist
+Puno Ferreo
 Level 65
 Attacks:
 Power-Up Punch
@@ -340,7 +340,7 @@ Ice Punch
 
 Lickitung
 
-Oblivious
+Despiste
 Level 65
 Attacks:
 Round
@@ -350,7 +350,7 @@ Muddy Water
 
 Weezing
 
-Neutralizing Gas
+Gas Reactivo
 Level 65
 Attacks:
 Clear Smog
@@ -360,7 +360,7 @@ Dark Pulse
 
 Weezing (Galarian Form)
 
-Misty Surge
+Nebulogenesis
 Level 65
 Attacks:
 Strange Steam
@@ -370,7 +370,7 @@ Taunt
 
 Rhydon
 
-Rock Head
+Cabeza Roca
 Level 65
 Attacks:
 Drill Run
@@ -380,7 +380,7 @@ Scary Face
 
 Chansey
 
-Healer
+Alma Cura
 Level 65
 Attacks:
 Round
@@ -390,7 +390,7 @@ Light Screen
 
 Tangela
 
-Leaf Guard
+Defensa Hoja
 Level 65
 Attacks:
 Power Whip
@@ -400,7 +400,7 @@ Body Slam
 
 Kangaskhan
 
-Early Bird
+Madrugar
 Level 65
 Attacks:
 Body Slam
@@ -410,7 +410,7 @@ Outrage
 
 Seadra
 
-Sniper
+Francotirador
 Level 65
 Attacks:
 Scald
@@ -420,7 +420,7 @@ Round
 
 Seaking
 
-Water Veil
+Velo Agua
 Level 65
 Attacks:
 Waterfall
@@ -430,7 +430,7 @@ Drill Run
 
 Starmie
 
-Analytic
+Calculo Final
 Level 65
 Attacks:
 Power Gem
@@ -440,7 +440,7 @@ Icy Wind
 
 Mr. Mime
 
-Filter
+Filtro
 Level 65
 Attacks:
 Light Screen
@@ -450,7 +450,7 @@ Psychic
 
 Mr. Mime (Galarian Form)
 
-Ice Body
+Gelido
 Level 65
 Attacks:
 Light Screen
@@ -460,7 +460,7 @@ Psychic
 
 Scyther
 
-Technician
+Experto
 Level 65
 Attacks:
 Fury Cutter
@@ -470,7 +470,7 @@ Wing Attack
 
 Jynx
 
-Dry Skin
+Piel Seca
 Level 65
 Attacks:
 Draining Kiss
@@ -480,7 +480,7 @@ Round
 
 Electabuzz
 
-Vital Spirit
+Espíritu Vital
 Level 65
 Attacks:
 Rising Voltage
@@ -490,7 +490,7 @@ Round
 
 Magmar
 
-Vital Spirit
+Espíritu Vital
 Level 65
 Attacks:
 Fire Blast
@@ -500,7 +500,7 @@ Round
 
 Tauros
 
-Anger Point
+Irascible
 Level 65
 Attacks:
 Facade
@@ -510,7 +510,7 @@ Assurance
 
 Ditto
 
-Imposter
+Impostor
 Level 65
 Attacks:
 Transform
@@ -520,7 +520,7 @@ Transform
 
 Vaporeon
 
-Water Absorb
+Absorbe Agua
 Level 65
 Attacks:
 Water Pulse
@@ -530,7 +530,7 @@ Haze
 
 Jolteon
 
-Volt Absorb
+Absorbe Elec
 Level 65
 Attacks:
 Thunderbolt
@@ -540,7 +540,7 @@ Helping Hand
 
 Flareon
 
-Flash Fire
+Absorbe Fuego
 Level 65
 Attacks:
 Burning Jealousy
@@ -550,7 +550,7 @@ Last Resort
 
 Porygon
 
-Download
+Descarga
 Level 65
 Attacks:
 Foul Play
@@ -560,7 +560,7 @@ Hyper Beam
 
 Dragonair
 
-Shed Skin
+Mudar
 Level 65
 Attacks:
 Blizzard
@@ -570,7 +570,7 @@ Thunder
 
 Noctowl
 
-Tinted Lens
+Cromolente
 Level 65
 Attacks:
 Echoed Voice
@@ -580,7 +580,7 @@ Hypnosis
 
 Lanturn
 
-Volt Absorb
+Absorbe Elec
 Level 65
 Attacks:
 Water Pulse
@@ -590,7 +590,7 @@ Confuse Ray
 
 Togetic
 
-Serene Grace
+Dicha
 Level 65
 Attacks:
 Life Dew
@@ -600,7 +600,7 @@ Mystical Fire
 
 Xatu
 
-Magic Bounce
+Espejo Magico
 Level 65
 Attacks:
 Psychic
@@ -610,7 +610,7 @@ Confuse Ray
 
 Bellossom
 
-Healer
+Alma Cura
 Level 65
 Attacks:
 Grassy Terrain
@@ -620,7 +620,7 @@ Dazzling Gleam
 
 Azumarill
 
-Sap Sipper
+Herbivoro
 Level 65
 Attacks:
 Aqua Jet
@@ -630,7 +630,7 @@ Bounce
 
 Sudowoodo
 
-Sturdy
+Robustez
 Level 65
 Attacks:
 Stomping Tantrum
@@ -640,7 +640,7 @@ Body Press
 
 Politoed
 
-Drizzle
+Llovizna
 Level 65
 Attacks:
 Liquidation
@@ -650,7 +650,7 @@ Helping Hand
 
 Quagsire
 
-Unaware
+Ignorante
 Level 65
 Attacks:
 Focus Blast
@@ -660,7 +660,7 @@ Amnesia
 
 Slowking
 
-Own Tempo
+Ritmo Propio
 Level 65
 Attacks:
 Future Sight
@@ -670,7 +670,7 @@ Ice Punch
 
 Dunsparce
 
-Serene Grace
+Dicha
 Level 65
 Attacks:
 Skitter Smack
@@ -680,7 +680,7 @@ Ice Beam
 
 Qwilfish
 
-Intimidate
+Intimidacion
 Level 65
 Attacks:
 Swords Dance
@@ -690,7 +690,7 @@ Steel Roller
 
 Sneasel
 
-Keen Eye
+Vista Lince
 Level 65
 Attacks:
 Triple Axel
@@ -700,7 +700,7 @@ Snarl
 
 Piloswine
 
-Thick Fat
+Sebo
 Level 65
 Attacks:
 Blizzard
@@ -710,7 +710,7 @@ Superpower
 
 Octillery
 
-Sniper
+Francotirador
 Level 65
 Attacks:
 Skitter Smack
@@ -720,7 +720,7 @@ Acid Spray
 
 Mantine
 
-Water Absorb
+Absorbe Agua
 Level 65
 Attacks:
 Air Slash
@@ -730,7 +730,7 @@ Water Pulse
 
 Skarmory
 
-Weak Armor
+Armadura Fragil
 Level 65
 Attacks:
 Assurance
@@ -740,7 +740,7 @@ Fly
 
 Hitmontop
 
-Intimidate
+Intimidacion
 Level 65
 Attacks:
 Drill Run
@@ -750,7 +750,7 @@ Coaching
 
 Miltank
 
-Scrappy
+Intrepido
 Level 65
 Attacks:
 Mega Kick
@@ -760,7 +760,7 @@ Play Rough
 
 Grovyle
 
-Overgrow
+Espesura
 Level 65
 Attacks:
 Grass Pledge
@@ -770,7 +770,7 @@ Endure
 
 Sceptile
 
-Unburden
+Liviano
 Level 65
 Attacks:
 Grass Pledge
@@ -780,7 +780,7 @@ X-Scissor
 
 Combusken
 
-Blaze
+Mar Llamas
 Level 65
 Attacks:
 Fire Pledge
@@ -790,7 +790,7 @@ Low Sweep
 
 Blaziken
 
-Speed Boost
+Impulso
 Level 65
 Attacks:
 Fire Pledge
@@ -800,7 +800,7 @@ Coaching
 
 Marshtomp
 
-Torrent
+Torrente
 Level 65
 Attacks:
 Water Pledge
@@ -810,7 +810,7 @@ Ice Punch
 
 Swampert
 
-Damp
+Humedad
 Level 65
 Attacks:
 Water Pledge
@@ -820,7 +820,7 @@ Amnesia
 
 Linoone
 
-Pickup
+Recogida
 Level 65
 Attacks:
 Slash
@@ -830,7 +830,7 @@ Shadow Claw
 
 Linoone (Galarian Form)
 
-Pickup
+Recogida
 Level 65
 Attacks:
 Throat Chop
@@ -840,7 +840,7 @@ Substitute
 
 Pelipper
 
-Drizzle
+Llovizna
 Level 65
 Attacks:
 Dual Wingbeat
@@ -850,7 +850,7 @@ Quick Attack
 
 Ninjask
 
-Speed Boost
+Impulso
 Level 65
 Attacks:
 Fury Cutter
@@ -860,7 +860,7 @@ Skitter Smack
 
 Exploud
 
-Scrappy
+Intrepido
 Level 65
 Attacks:
 Terrain Pulse
@@ -870,7 +870,7 @@ Blizzard
 
 Lairon
 
-Sturdy
+Robustez
 Level 65
 Attacks:
 Steel Roller
@@ -880,7 +880,7 @@ Metal Sound
 
 Manectric
 
-Lightning Rod
+Pararrayos
 Level 65
 Attacks:
 Rising Voltage
@@ -890,7 +890,7 @@ Psychic Fangs
 
 Roselia
 
-Poison Point
+Punto Toxico
 Level 65
 Attacks:
 Leaf Storm
@@ -900,7 +900,7 @@ Life Dew
 
 Sharpedo
 
-Speed Boost
+Impulso
 Level 65
 Attacks:
 Aqua Jet
@@ -910,7 +910,7 @@ Scale Shot
 
 Wailmer
 
-Water Veil
+Velo Agua
 Level 65
 Attacks:
 Brine
@@ -920,7 +920,7 @@ Endure
 
 Torkoal
 
-Drought
+Sequia
 Level 65
 Attacks:
 Burning Jealousy
@@ -930,7 +930,7 @@ Smokescreen
 
 Flygon
 
-Levitate
+Levitacion
 Level 65
 Attacks:
 Steel Wing
@@ -940,7 +940,7 @@ Mud-Slap
 
 Altaria
 
-Cloud Nine
+Aclimatacion
 Level 65
 Attacks:
 Dazzling Gleam
@@ -950,7 +950,7 @@ Dragon Pulse
 
 Whiscash
 
-Hydration
+Hidratacion
 Level 65
 Attacks:
 Bounce
@@ -960,7 +960,7 @@ Zen Headbutt
 
 Crawdaunt
 
-Adaptability
+Adaptable
 Level 65
 Attacks:
 Lash Out
@@ -970,7 +970,7 @@ Swords Dance
 
 Claydol
 
-Levitate
+Levitacion
 Level 65
 Attacks:
 Trick Room
@@ -980,7 +980,7 @@ Hyper Beam
 
 Cradily
 
-Suction Cups
+Ventosas
 Level 65
 Attacks:
 Energy Ball
@@ -990,7 +990,7 @@ Sludge Bomb
 
 Armaldo
 
-Battle Armor
+Armadura Batalla
 Level 65
 Attacks:
 X-Scissor
@@ -1000,7 +1000,7 @@ Sandstorm
 
 Dusclops
 
-Pressure
+Presion
 Level 65
 Attacks:
 Shadow Sneak
@@ -1010,7 +1010,7 @@ Skitter Smack
 
 Absol
 
-Pressure
+Presion
 Level 65
 Attacks:
 Blizzard
@@ -1020,7 +1020,7 @@ Fire Blast
 
 Glalie
 
-Ice Body
+Gelido
 Level 65
 Attacks:
 Steel Roller
@@ -1030,7 +1030,7 @@ Fake Tears
 
 Sealeo
 
-Thick Fat
+Sebo
 Level 65
 Attacks:
 Ice Beam
@@ -1040,7 +1040,7 @@ Swagger
 
 Relicanth
 
-Rock Head
+Cabeza Roca
 Level 65
 Attacks:
 Liquidation
@@ -1050,7 +1050,7 @@ Scale Shot
 
 Metang
 
-Clear Body
+Cuerpo Puro
 Level 65
 Attacks:
 Meteor Mash
@@ -1060,7 +1060,7 @@ Reflect
 
 Luxray
 
-Guts
+Agallas
 Level 65
 Attacks:
 Facade
@@ -1070,7 +1070,7 @@ Electric Terrain
 
 Vespiquen
 
-Pressure
+Presion
 Level 65
 Attacks:
 Attack Order
@@ -1080,7 +1080,7 @@ Revenge
 
 Cherrim
 
-Flower Gift
+Don Floral
 Level 65
 Attacks:
 Solar Beam
@@ -1090,7 +1090,7 @@ Weather Ball
 
 Gastrodon
 
-Sand Force
+Poder Arena
 Level 65
 Attacks:
 Body Slam
@@ -1100,7 +1100,7 @@ Waterfall
 
 Drifblim
 
-Aftermath
+Detonacion
 Level 65
 Attacks:
 Will-O-Wisp
@@ -1110,7 +1110,7 @@ Thunderbolt
 
 Lopunny
 
-Cute Charm
+Gran Encanto
 Level 65
 Attacks:
 Drain Punch
@@ -1120,7 +1120,7 @@ Bounce
 
 Skuntank
 
-Aftermath
+Detonacion
 Level 65
 Attacks:
 Lash Out
@@ -1130,7 +1130,7 @@ Sucker Punch
 
 Bronzong
 
-Levitate
+Levitacion
 Level 65
 Attacks:
 Zen Headbutt
@@ -1140,7 +1140,7 @@ Skill Swap
 
 Munchlax
 
-Thick Fat
+Sebo
 Level 65
 Attacks:
 Thunder Punch
@@ -1150,7 +1150,7 @@ Gunk Shot
 
 Drapion
 
-Battle Armor
+Armadura Batalla
 Level 65
 Attacks:
 Lash Out
@@ -1160,7 +1160,7 @@ Iron Tail
 
 Abomasnow
 
-Soundproof
+Insonorizar
 Level 65
 Attacks:
 Avalanche
@@ -1170,7 +1170,7 @@ Grassy Glide
 
 Froslass
 
-Snow Cloak
+Manto Niveo
 Level 65
 Attacks:
 Triple Axel
@@ -1180,7 +1180,7 @@ Shadow Ball
 
 Rotom
 
-Levitate
+Levitacion
 Level 65
 Attacks:
 Electro Ball
@@ -1190,7 +1190,7 @@ Hex
 
 Stoutland
 
-Scrappy
+Intrepido
 Level 65
 Attacks:
 Giga Impact
@@ -1200,7 +1200,7 @@ Baby-Doll Eyes
 
 Liepard
 
-Limber
+Flexibilidad
 Level 65
 Attacks:
 Assurance
@@ -1210,7 +1210,7 @@ Screech
 
 Musharna
 
-Forewarn
+Alerta
 Level 65
 Attacks:
 Expanding Force
@@ -1220,7 +1220,7 @@ Energy Ball
 
 Unfezant
 
-Big Pecks
+Sacapecho
 Level 65
 Attacks:
 Dual Wingbeat
@@ -1230,7 +1230,7 @@ Tailwind
 
 Boldore
 
-Sturdy
+Robustez
 Level 65
 Attacks:
 Stone Edge
@@ -1250,7 +1250,7 @@ Air Slash
 
 Audino
 
-Healer
+Alma Cura
 Level 65
 Attacks:
 Life Dew
@@ -1260,7 +1260,7 @@ Flamethrower
 
 Gurdurr
 
-Guts
+Agallas
 Level 65
 Attacks:
 Focus Punch
@@ -1270,7 +1270,7 @@ High Horsepower
 
 Palpitoad
 
-Swift Swim
+Nado Rapido
 Level 65
 Attacks:
 Echoed Voice
@@ -1280,7 +1280,7 @@ Bounce
 
 Seismitoad
 
-Swift Swim
+Nado Rapido
 Level 65
 Attacks:
 Echoed Voice
@@ -1290,7 +1290,7 @@ Screech
 
 Scolipede
 
-Swarm
+Enjambre
 Level 65
 Attacks:
 Steel Roller
@@ -1300,7 +1300,7 @@ Megahorn
 
 Whimsicott
 
-Prankster
+Bromista
 Level 65
 Attacks:
 Hurricane
@@ -1310,7 +1310,7 @@ Play Rough
 
 Lilligant
 
-Own Tempo
+Ritmo Propio
 Level 65
 Attacks:
 Petal Dance
@@ -1320,7 +1320,7 @@ Pollen Puff
 
 Basculin (Red-Striped Form)
 
-Adaptability
+Adaptable
 Level 65
 Attacks:
 Liquidation
@@ -1330,7 +1330,7 @@ Ice Fang
 
 Basculin (Blue-Striped Form)
 
-Adaptability
+Adaptable
 Level 65
 Attacks:
 Scald
@@ -1340,7 +1340,7 @@ Substitute
 
 Krookodile
 
-Anger Point
+Irascible
 Level 65
 Attacks:
 Earth Power
@@ -1350,7 +1350,7 @@ Sandstorm
 
 Maractus
 
-Storm Drain
+Colector
 Level 65
 Attacks:
 Leaf Storm
@@ -1360,7 +1360,7 @@ Acupressure
 
 Crustle
 
-Shell Armor
+Caparazon
 Level 65
 Attacks:
 Shell Smash
@@ -1370,7 +1370,7 @@ Body Press
 
 Sigilyph
 
-Wonder Skin
+Piel Milagro
 Level 65
 Attacks:
 Psychic
@@ -1380,7 +1380,7 @@ Flash Cannon
 
 Cofagrigus
 
-Mummy
+Momia
 Level 65
 Attacks:
 Shadow Ball
@@ -1390,7 +1390,7 @@ Wonder Room
 
 Garbodor
 
-Aftermath
+Detonacion
 Level 65
 Attacks:
 Gunk Shot
@@ -1400,7 +1400,7 @@ Venom Drench
 
 Cinccino
 
-Technician
+Experto
 Level 65
 Attacks:
 Echoed Voice
@@ -1410,7 +1410,7 @@ Triple Axel
 
 Vanillish
 
-Ice Body
+Gelido
 Level 65
 Attacks:
 Mist
@@ -1420,7 +1420,7 @@ Hyper Voice
 
 Emolga
 
-Static
+Electricidad Estatica
 Level 65
 Attacks:
 Acrobatics
@@ -1430,7 +1430,7 @@ Electroweb
 
 Escavalier
 
-Shell Armor
+Caparazon
 Level 65
 Attacks:
 Drill Run
@@ -1440,7 +1440,7 @@ Taunt
 
 Amoonguss
 
-Effect Spore
+Efecto Espora
 Level 65
 Attacks:
 Clear Smog
@@ -1450,7 +1450,7 @@ Venoshock
 
 Jellicent
 
-Water Absorb
+Absorbe Agua
 Level 65
 Attacks:
 Dazzling Gleam
@@ -1460,7 +1460,7 @@ Icy Wind
 
 Galvantula
 
-Compoundeyes
+Ojo Compuesto
 Level 65
 Attacks:
 Thunder
@@ -1470,7 +1470,7 @@ Electroweb
 
 Klang
 
-Minus
+Menos
 Level 65
 Attacks:
 Charge Beam
@@ -1480,7 +1480,7 @@ Power Gem
 
 Klinklang
 
-Plus
+Mas
 Level 65
 Attacks:
 Gear Grind
@@ -1490,7 +1490,7 @@ Metal Sound
 
 Beheeyem
 
-Synchronize
+Sincronia
 Level 65
 Attacks:
 Expanding Force
@@ -1500,7 +1500,7 @@ Round
 
 Lampent
 
-Flash Fire
+Absorbe Fuego
 Level 65
 Attacks:
 Burning Jealousy
@@ -1510,7 +1510,7 @@ Trick Room
 
 Fraxure
 
-Rivalry
+Rivalidad
 Level 65
 Attacks:
 Giga Impact
@@ -1520,7 +1520,7 @@ X-Scissor
 
 Beartic
 
-Slush Rush
+Quitanieves
 Level 65
 Attacks:
 Body Press
@@ -1530,7 +1530,7 @@ Brine
 
 Cryogonal
 
-Levitate
+Levitacion
 Level 65
 Attacks:
 Blizzard
@@ -1540,7 +1540,7 @@ Solar Beam
 
 Accelgor
 
-Hydration
+Hidratacion
 Level 65
 Attacks:
 Struggle Bug
@@ -1550,7 +1550,7 @@ Bug Buzz
 
 Stunfisk
 
-Static
+Electricidad Estatica
 Level 65
 Attacks:
 Electric Terrain
@@ -1560,7 +1560,7 @@ Muddy Water
 
 Stunfisk (Galarian Form)
 
-Mimicry
+Mimetismo
 Level 65
 Attacks:
 Metal Sound
@@ -1570,7 +1570,7 @@ Earth Power
 
 Mienshao
 
-Inner Focus
+Foco Interno
 Level 65
 Attacks:
 Aura Sphere
@@ -1580,7 +1580,7 @@ Mega Kick
 
 Druddigon
 
-Sheer Force
+Potencia Bruta
 Level 65
 Attacks:
 Lash Out
@@ -1590,7 +1590,7 @@ Dig
 
 Golurk
 
-Iron Fist
+Puno Ferreo
 Level 65
 Attacks:
 Focus Punch
@@ -1600,7 +1600,7 @@ Safeguard
 
 Bisharp
 
-Inner Focus
+Foco Interno
 Level 65
 Attacks:
 Night Slash
@@ -1610,7 +1610,7 @@ Metal Sound
 
 Bouffalant
 
-Sap Sipper
+Herbivoro
 Level 65
 Attacks:
 Body Slam
@@ -1620,7 +1620,7 @@ Superpower
 
 Heatmor
 
-Flash Fire
+Absorbe Fuego
 Level 65
 Attacks:
 Fire Lash
@@ -1630,7 +1630,7 @@ Solar Beam
 
 Durant
 
-Swarm
+Enjambre
 Level 65
 Attacks:
 Thunder Fang
@@ -1640,7 +1640,7 @@ Metal Claw
 
 Diggersby
 
-Huge Power
+Potencia
 Level 65
 Attacks:
 Stone Edge
@@ -1650,7 +1650,7 @@ Quick Attack
 
 Talonflame
 
-Gale Wings
+Alas Vendaval
 Level 65
 Attacks:
 Tailwind
@@ -1660,7 +1660,7 @@ Flamethrower
 
 Pangoro
 
-Iron Fist
+Puno Ferreo
 Level 65
 Attacks:
 Bullet Punch
@@ -1670,7 +1670,7 @@ Coaching
 
 Doublade
 
-No Guard
+Indefenso
 Level 65
 Attacks:
 Iron Head
@@ -1680,7 +1680,7 @@ Aerial Ace
 
 Malamar
 
-Contrary
+Respondon
 Level 65
 Attacks:
 Topsy-Turvy
@@ -1690,7 +1690,7 @@ Thunderbolt
 
 Barbaracle
 
-Tough Claws
+Garra Dura
 Level 65
 Attacks:
 Razor Shell
@@ -1700,7 +1700,7 @@ Poison Jab
 
 Heliolisk
 
-Dry Skin
+Piel Seca
 Level 65
 Attacks:
 Electro Ball
@@ -1710,7 +1710,7 @@ Mud-Slap
 
 Tyrantrum
 
-Strong Jaw
+Mandibula Fuerte
 Level 65
 Attacks:
 Scale Shot
@@ -1720,7 +1720,7 @@ Body Slam
 
 Aurorus
 
-Refrigerate
+Piel Helada
 Level 65
 Attacks:
 Body Slam
@@ -1730,7 +1730,7 @@ Thunder Wave
 
 Hawlucha
 
-Limber
+Flexibilidad
 Level 65
 Attacks:
 Taunt
@@ -1740,7 +1740,7 @@ Low Sweep
 
 Dedenne
 
-Plus
+Mas
 Level 65
 Attacks:
 Entrainment
@@ -1750,7 +1750,7 @@ Substitute
 
 Klefki
 
-Prankster
+Bromista
 Level 65
 Attacks:
 Light Screen
@@ -1760,7 +1760,7 @@ Play Rough
 
 Trevenant
 
-Harvest
+Cosecha
 Level 65
 Attacks:
 Horn Leech
@@ -1770,7 +1770,7 @@ Trick Room
 
 Gourgeist (Average Size)
 
-Pickup
+Recogida
 Level 65
 Attacks:
 Mystical Fire
@@ -1780,7 +1780,7 @@ Scary Face
 
 Charjabug
 
-Battery
+Bateria
 Level 65
 Attacks:
 String Shot
@@ -1790,7 +1790,7 @@ Dig
 
 Vikavolt
 
-Levitate
+Levitacion
 Level 65
 Attacks:
 Spark
@@ -1800,7 +1800,7 @@ Bug Buzz
 
 Ribombee
 
-Sweet Veil
+Velo Dulce
 Level 65
 Attacks:
 Pollen Puff
@@ -1810,7 +1810,7 @@ Fake Tears
 
 Lycanroc (Midday Form)
 
-Sand Rush
+Impetu Arena
 Level 65
 Attacks:
 Accelerock
@@ -1820,7 +1820,7 @@ Howl
 
 Lycanroc (Midnight Form)
 
-No Guard
+Indefenso
 Level 65
 Attacks:
 Stone Edge
@@ -1830,7 +1830,7 @@ Crunch
 
 Mudsdale
 
-Own Tempo
+Ritmo Propio
 Level 65
 Attacks:
 Lash Out
@@ -1840,7 +1840,7 @@ Rock Smash
 
 Araquanid
 
-Water Absorb
+Absorbe Agua
 Level 65
 Attacks:
 Liquidation
@@ -1850,7 +1850,7 @@ Poison Jab
 
 Lurantis
 
-Contrary
+Respondon
 Level 65
 Attacks:
 Leaf Storm
@@ -1860,7 +1860,7 @@ Round
 
 Shiinotic
 
-Rain Dish
+Cura Lluvia
 Level 65
 Attacks:
 Strength Sap
@@ -1880,7 +1880,7 @@ Venom Drench
 
 Bewear
 
-Klutz
+Zoquete
 Level 65
 Attacks:
 Double-Edge
@@ -1890,7 +1890,7 @@ Giga Impact
 
 Tsareena
 
-Queenly Majesty
+Regia Presencia
 Level 65
 Attacks:
 Aromatherapy
@@ -1900,7 +1900,7 @@ Swagger
 
 Comfey
 
-Triage
+Primer Auxilio
 Level 65
 Attacks:
 Floral Healing
@@ -1910,7 +1910,7 @@ Energy Ball
 
 Oranguru
 
-Symbiosis
+Simbiosis
 Level 65
 Attacks:
 Instruct
@@ -1920,7 +1920,7 @@ Psyshock
 
 Passimian
 
-Receiver
+Receptor
 Level 65
 Attacks:
 Brick Break
@@ -1930,7 +1930,7 @@ Acrobatics
 
 Palossand
 
-Sand Veil
+Velo Arena
 Level 65
 Attacks:
 Terrain Pulse
@@ -1940,7 +1940,7 @@ Shadow Ball
 
 Pyukumuku
 
-Innards Out
+Reves
 Level 65
 Attacks:
 Toxic
@@ -1950,7 +1950,7 @@ Counter
 
 Togedemaru
 
-Sturdy
+Robustez
 Level 65
 Attacks:
 Nuzzle
@@ -1960,7 +1960,7 @@ Iron Head
 
 Mimikyu
 
-Disguise
+Disfraz
 Level 65
 Attacks:
 Shadow Claw
@@ -1970,7 +1970,7 @@ Curse
 
 Greedent
 
-Cheek Pouch
+Carrillo
 Level 65
 Attacks:
 Gyro Ball
@@ -1980,7 +1980,7 @@ Body Slam
 
 Orbeetle
 
-Swarm
+Enjambre
 Level 65
 Attacks:
 After You
@@ -1990,7 +1990,7 @@ Struggle Bug
 
 Thievul
 
-Unburden
+Liviano
 Level 65
 Attacks:
 Foul Play
@@ -2000,7 +2000,7 @@ Burning Jealousy
 
 Eldegoss
 
-Effect Spore
+Efecto Espora
 Level 65
 Attacks:
 Light Screen
@@ -2010,7 +2010,7 @@ Leaf Storm
 
 Dubwool
 
-Fluffy
+Peluche
 Level 65
 Attacks:
 Grassy Glide
@@ -2020,7 +2020,7 @@ Substitute
 
 Drednaw
 
-Strong Jaw
+Mandibula Fuerte
 Level 65
 Attacks:
 Razor Shell
@@ -2030,7 +2030,7 @@ Rock Slide
 
 Boltund
 
-Strong Jaw
+Mandibula Fuerte
 Level 65
 Attacks:
 Rising Voltage
@@ -2040,7 +2040,7 @@ Helping Hand
 
 Carkol
 
-Flash Fire
+Absorbe Fuego
 Level 65
 Attacks:
 Overheat
@@ -2050,7 +2050,7 @@ Rock Slide
 
 Coalossal
 
-Steam Engine
+Combustible
 Level 65
 Attacks:
 Smokescreen
@@ -2060,7 +2060,7 @@ Scald
 
 Sandaconda
 
-Sand Spit
+Expulsarena
 Level 65
 Attacks:
 Scorching Sands
@@ -2070,7 +2070,7 @@ Glare
 
 Cramorant
 
-Gulp Missile
+Tragamisil
 Level 65
 Attacks:
 Dive
@@ -2080,7 +2080,7 @@ Throat Chop
 
 Barraskewda
 
-Swift Swim
+Nado Rapido
 Level 65
 Attacks:
 Aqua Jet
@@ -2090,7 +2090,7 @@ Endure
 
 Toxtricity
 
-Plus
+Mas
 Level 65
 Attacks:
 Rising Voltage
@@ -2100,7 +2100,7 @@ Tearful Look
 
 Centiskorch
 
-White Smoke
+Humo Blanco
 Level 65
 Attacks:
 Flamethrower
@@ -2110,7 +2110,7 @@ Slam
 
 Grapploct
 
-Limber
+Flexibilidad
 Level 65
 Attacks:
 Topsy-Turvy
@@ -2120,7 +2120,7 @@ Focus Blast
 
 Polteageist
 
-Weak Armor
+Armadura Fragil
 Level 65
 Attacks:
 Aromatherapy
@@ -2140,7 +2140,7 @@ Safeguard
 
 Grimmsnarl
 
-Prankster
+Bromista
 Level 65
 Attacks:
 Power-Up Punch
@@ -2150,7 +2150,7 @@ Confide
 
 Obstagoon
 
-Reckless
+Audaz
 Level 65
 Attacks:
 Lash Out
@@ -2160,7 +2160,7 @@ Screech
 
 Perrserker
 
-Steely Spirit
+Alma Acerada
 Level 65
 Attacks:
 Metal Claw
@@ -2170,7 +2170,7 @@ Thunder
 
 Alcremie
 
-Aroma Veil
+Velo Aroma
 Level 65
 Attacks:
 Decorate
@@ -2180,7 +2180,7 @@ Magical Leaf
 
 Falinks
 
-Battle Armor
+Armadura Batalla
 Level 65
 Attacks:
 First Impression
@@ -2190,7 +2190,7 @@ Brick Break
 
 Pincurchin
 
-Electric Surge
+Electrogenesis
 Level 65
 Attacks:
 Hydro Pump
@@ -2200,7 +2200,7 @@ Venom Drench
 
 Frosmoth
 
-Ice Scales
+Escama de Hielo
 Level 65
 Attacks:
 Weather Ball
@@ -2210,7 +2210,7 @@ Hurricane
 
 Indeedee (Male)
 
-Synchronize
+Sincronia
 Level 65
 Attacks:
 Mystical Fire
@@ -2220,7 +2220,7 @@ Shadow Ball
 
 Morpeko
 
-Hunger Switch
+Mutapetito
 Level 65
 Attacks:
 Aura Wheel
@@ -2230,7 +2230,7 @@ Ice Fang
 
 Copperajah
 
-Sheer Force
+Potencia Bruta
 Level 65
 Attacks:
 Iron Defense
@@ -2240,7 +2240,7 @@ Steel Roller
 
 Duraludon
 
-Light Metal
+Metal Liviano
 Level 65
 Attacks:
 Breaking Swipe
@@ -2250,7 +2250,7 @@ Thunderbolt
 
 Drakloak
 
-Clear Body
+Cuerpo Puro
 Level 65
 Attacks:
 Dragon Rush

@@ -1,6 +1,6 @@
 Articuno
 
-Pressure
+Presion
 Level 70
 Attacks:
 Ice Beam
@@ -11,7 +11,7 @@ Blizzard
 
 Zapdos
 
-Pressure
+Presion
 Level 70
 Attacks:
 Thunder
@@ -22,7 +22,7 @@ Discharge
 
 Moltres
 
-Pressure
+Presion
 Level 70
 Attacks:
 Heat Wave
@@ -33,7 +33,7 @@ Heat Wave
 
 Mewtwo
 
-Pressure
+Presion
 Level 70
 Attacks:
 Psychic
@@ -44,7 +44,7 @@ Psystrike
 
 Raikou
 
-Pressure
+Presion
 Level 70
 Attacks:
 Thunderbolt
@@ -55,7 +55,7 @@ Spark
 
 Entei
 
-Pressure
+Presion
 Level 70
 Attacks:
 Flamethrower
@@ -66,7 +66,7 @@ Flame Wheel
 
 Suicune
 
-Pressure
+Presion
 Level 70
 Attacks:
 Liquidation
@@ -78,7 +78,7 @@ Water Pulse
 Lugia
 Shield Native
 
-Pressure
+Presion
 Level 70
 Attacks:
 Dragon Pulse
@@ -90,7 +90,7 @@ Aeroblast
 Ho-Oh
 Sword Native
 
-Pressure
+Presion
 Level 70
 Attacks:
 Flare Blitz
@@ -102,7 +102,7 @@ Sacred Fire
 Latias
 Shield Native
 
-Levitate
+Levitacion
 Level 70
 Attacks:
 Reflect Type
@@ -114,7 +114,7 @@ Mist Ball
 Latios
 Sword Native
 
-Levitate
+Levitacion
 Level 70
 Attacks:
 Dragon Dance
@@ -126,7 +126,7 @@ Luster Purge
 Kyogre
 Shield Native
 
-Drizzle
+Llovizna
 Level 70
 Attacks:
 Surf
@@ -138,7 +138,7 @@ Origin Pulse
 Groudon
 Sword Native
 
-Drought
+Sequia
 Level 70
 Attacks:
 Earthquake
@@ -149,7 +149,7 @@ Precipice Blades
 
 Rayquaza
 
-Air Lock
+Bucle Aire
 Level 70
 Attacks:
 Dragon Ascent
@@ -160,7 +160,7 @@ Dragon Pulse
 
 Uxie
 
-Levitate
+Levitacion
 Level 70
 Attacks:
 Psychic
@@ -171,7 +171,7 @@ Swift
 
 Mesprit
 
-Levitate
+Levitacion
 Level 70
 Attacks:
 Psychic
@@ -182,7 +182,7 @@ Swift
 
 Azelf
 
-Levitate
+Levitacion
 Level 70
 Attacks:
 Psychic
@@ -194,7 +194,7 @@ Swift
 Dialga
 Sword Native
 
-Pressure
+Presion
 Level 70
 Attacks:
 Slash
@@ -206,7 +206,7 @@ Iron Tail
 Palkia
 Shield Native
 
-Pressure
+Presion
 Level 70
 Attacks:
 Slash
@@ -217,7 +217,7 @@ Aqua Tail
 
 Heatran
 
-Flash Fire
+Absorbe Fuego
 Level 70
 Attacks:
 Metal Sound
@@ -228,7 +228,7 @@ Heat Wave
 
 Giratina (Altered Forme)
 
-Pressure
+Presion
 Level 70
 Attacks:
 Dragon Claw
@@ -239,7 +239,7 @@ Shadow Claw
 
 Cresselia
 
-Levitate
+Levitacion
 Level 70
 Attacks:
 Icy Wind
@@ -251,7 +251,7 @@ Psychic
 Tornadus (Incarnate Forme)
 Sword Native
 
-Prankster
+Bromista
 Level 70
 Attacks:
 Hurricane
@@ -263,7 +263,7 @@ Air Cutter
 Thundurus (Incarnate Forme)
 Shield Native
 
-Prankster
+Bromista
 Level 70
 Attacks:
 Thunder
@@ -275,7 +275,7 @@ Discharge
 Reshiram
 Sword Native
 
-Turboblaze
+Turbollama
 Level 70
 Attacks:
 Noble Roar
@@ -287,7 +287,7 @@ Blue Flare
 Zekrom
 Shield Native
 
-Teravolt
+Terravoltaje
 Level 70
 Attacks:
 Noble Roar
@@ -298,7 +298,7 @@ Bolt Strike
 
 Landorus (Incarnate Forme)
 
-Sand Force
+Poder Arena
 Level 70
 Attacks:
 Sand Tomb
@@ -309,7 +309,7 @@ Earthquake
 
 Kyurem (Normal Kyurem)
 
-Pressure
+Presion
 Level 70
 Attacks:
 Ice Beam
@@ -321,7 +321,7 @@ Glaciate
 Xerneas
 Sword Native
 
-Fairy Aura
+Aura Feerica
 Level 70
 Attacks:
 Ingrain
@@ -333,7 +333,7 @@ Moonblast
 Yveltal
 Shield Native
 
-Dark Aura
+Aura Oscura
 Level 70
 Attacks:
 Taunt
@@ -344,7 +344,7 @@ Snarl
 
 Zygarde (50% Forme)
 
-Power Construct
+Agrupamiento
 Level 70
 Attacks:
 Thousand Arrows
@@ -355,7 +355,7 @@ Land's Wrath
 
 Tapu Koko
 
-Electric Surge
+Electrogenesis
 Level 70
 Attacks:
 Thunderbolt
@@ -366,7 +366,7 @@ Discharge
 
 Tapu Lele
 
-Psychic Surge
+Psicogenesis
 Level 70
 Attacks:
 Psychic
@@ -377,7 +377,7 @@ Psyshock
 
 Tapu Bulu
 
-Grassy Surge
+Herbogenesis
 Level 70
 Attacks:
 Superpower
@@ -388,7 +388,7 @@ Horn Leech
 
 Tapu Fini
 
-Misty Surge
+Nebulogenesis
 Level 70
 Attacks:
 Whirlpool
@@ -400,7 +400,7 @@ Surf
 Solgaleo
 Sword Native
 
-Full Metal Body
+Guardia Metalica
 Level 70
 Attacks:
 Zen Headbutt
@@ -412,7 +412,7 @@ Sunsteel Strike
 Lunala
 Shield Native
 
-Shadow Shield
+Guardia Espectro
 Level 70
 Attacks:
 Shadow Ball
@@ -423,7 +423,7 @@ Moongeist Beam
 
 Nihilego
 
-Beast Boost
+Ultraimpulso
 Level 70
 Attacks:
 Wonder Room
@@ -433,7 +433,7 @@ Acid Spray
 
 Buzzwole
 
-Beast Boost
+Ultraimpulso
 Level 70
 Attacks:
 Power-Up Punch
@@ -443,7 +443,7 @@ Dynamic Punch
 
 Pheromosa
 
-Beast Boost
+Ultraimpulso
 Level 70
 Attacks:
 High Jump Kick
@@ -453,7 +453,7 @@ Lunge
 
 Xurkitree
 
-Beast Boost
+Ultraimpulso
 Level 70
 Attacks:
 Power Whip
@@ -463,7 +463,7 @@ Brutal Swing
 
 Celesteela
 
-Beast Boost
+Ultraimpulso
 Level 70
 Attacks:
 Leech Seed
@@ -473,7 +473,7 @@ Earthquake
 
 Kartana
 
-Beast Boost
+Ultraimpulso
 Level 70
 Attacks:
 Vacuum Wave
@@ -483,7 +483,7 @@ Swords Dance
 
 Guzzlord
 
-Beast Boost
+Ultraimpulso
 Level 70
 Attacks:
 Dragon Rush
@@ -493,7 +493,7 @@ Mega Punch
 
 Necrozma
 
-Prism Armor
+Armadura Prisma
 Level 70
 Attacks:
 Psycho Cut
@@ -503,7 +503,7 @@ Autotomize
 
 Stakataka
 
-Beast Boost
+Ultraimpulso
 Level 70
 Attacks:
 Rock Slide
@@ -513,7 +513,7 @@ Autotomize
 
 Blacephalon
 
-Beast Boost
+Ultraimpulso
 Level 70
 Attacks:
 Shadow Claw

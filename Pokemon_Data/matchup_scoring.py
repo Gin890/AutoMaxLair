@@ -10,7 +10,7 @@ def type_damage_multiplier(type1: str, type2: str) -> int:
     """Return a damage multiplier based on an attack type and target type."""
     if type2 == '':
         return 1
-    types = ('Normal','Fire','Water','Electric','Grass','Ice','Fighting','Poison','Ground','Flying','Psychic','Bug','Rock','Ghost','Dragon','Dark','Steel','Fairy')
+    types = ('Normal','Fuego','Agua','Electrico','Planta','Hielo','Lucha','Veneno','Tierra','Volador','Psiquico','Bicho','Roca','Fantasma','Dragon','Siniestro','Acero','Hada')
     return ((1,1,1,1,1,1,1,1,1,1,1,1,0.5,0,1,1,0.5,1),
             (1,0.5,0.5,1,2,2,1,1,1,1,1,2,0.5,1,0.5,1,2,1),
             (1,2,0.5,1,0.5,1,1,1,2,1,1,1,2,1,0.5,1,1,1),
@@ -34,36 +34,36 @@ def type_damage_multiplier(type1: str, type2: str) -> int:
 
 def ability_damage_multiplier(attacker: Pokemon, move_index: int, defender: Pokemon) -> float:
     """Return a damage multiplier stemming from abilities."""
-    if attacker.ability in ('Mold Breaker', 'Turboblaze', 'Teravolt'):
+    if attacker.ability in ('Rompemoldes', 'Turbollama', 'Terravoltaje'):
         return 1
 
     move_type = attacker.moves[move_index].type
-    if move_type == 'Ground' and defender.ability == 'Levitate':
+    if move_type == 'Tierra' and defender.ability == 'Levitacion':
         if attacker.moves[move_index].name == 'Thousand Arrows':
             return 1
         else:
             return 0
-    elif move_type == 'Water' and defender.ability in ('Water Absorb', 'Storm Drain', 'Dry Skin'):
+    elif move_type == 'Agua' and defender.ability in ('Absorbe Agua', 'Colector', 'Piel Seca'):
         return 0
-    elif move_type == 'Fire':
-        if defender.ability == 'Flash Fire':
+    elif move_type == 'Fuego':
+        if defender.ability == 'Absorbe Fuego':
             return 0
-        elif defender.ability in ('Fluffy', 'Dry Skin'):
+        elif defender.ability in ('Peluche', 'Piel Seca'):
             return 2
-        elif defender.ability in ('Thick Fat', 'Heatproof'):
+        elif defender.ability in ('Sebo', 'Ignifugo'):
             return 0.5
-    elif move_type == 'Grass' and defender.ability == 'Sap Sipper':
+    elif move_type == 'Planta' and defender.ability == 'Herbivoro':
         return 0
-    elif move_type == 'Electric' and defender.ability in ('Lightning Rod', 'Motor Drive', 'Volt Absorb'):
+    elif move_type == 'Electrico' and defender.ability in ('Pararrayos', 'Electromotor', 'Absorbe Elec'):
         return 0
-    elif move_type == 'Ice' and defender.ability == 'Thick Fat':
+    elif move_type == 'Hielo' and defender.ability == 'Sebo':
         return 0.5
 
     return 1
 
 
 def get_max_move_power(move: Move) -> int:
-    if move.type.title() == 'Fighting' or move.type.title() == 'Poison':
+    if move.type.title() == 'Lucha' or move.type.title() == 'Veneno':
         if move.base_power < 10:
             return 0
         elif move.base_power <= 40:
@@ -114,13 +114,13 @@ def calculate_damage(attacker: Pokemon, move_index: int, defender: Pokemon, mult
     # Ignore weather for now
     # Ignore crits
     if move.type in attacker.types: # Apply STAB
-        if attacker.ability == 'Adaptability':
+        if attacker.ability == 'Adaptable':
             modifier *= 2
         else:
             modifier *= 1.5
     # Apply type effectiveness
     for i in range(len(defender.types)):
-        if move.name != 'Thousand Arrows' or defender.types[i].title() != 'Flying':
+        if move.name != 'Thousand Arrows' or defender.types[i].title() != 'Volador':
             modifier *= type_damage_multiplier(move.type, defender.types[i])
     # Apply status effects
     if move.category == 'Physical' and attacker.status == 'Burn':
