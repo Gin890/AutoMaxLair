@@ -25,7 +25,7 @@ class MaxLairInstance():
                  mode: str,
                  dynite_ore: int,
                  stage: str='join') -> None:
-        self.boss_pokemon_path, self.rental_pokemon_path, self.boss_matchups_path, self.rental_matchups_path, self.rental_scores_path = pokemon_data_paths
+        self.boss_pokemon_path, self.rental_pokemon_path, self.boss_matchups_path, self.rental_matchups_path, self.rental_scores_path, self.items_path = pokemon_data_paths
         self.reset_run()
         
         self.start_date = datetime
@@ -56,24 +56,65 @@ class MaxLairInstance():
 
         # Rectangles for checking shininess and reading specific text
         # Shiny star rectangle
-        self.shiny_rect = ((0.09,0.535), (0.12,0.575))
+        self.shiny_rect = ((0.09,0.533), (0.12,0.573))
         # Selectable Pokemon names rectangles
         self.sel_rect_1 = ((0.485,0.295), (0.61,0.335))
         self.sel_rect_2 = ((0.485,0.545), (0.61,0.585))
         self.sel_rect_3 = ((0.485,0.790), (0.61,0.830))
-        self.sel_rect_4 = ((0.485,0.590), (0.61,0.635))
+        self.sel_rect_4 = ((0.485,0.590), (0.61,0.630))
         # In-battle Pokemon name & type rectangles
         self.sel_rect_5 = ((0.205,0.125), (0.400,0.185))
-        self.type_rect_1 = ((0.250,0.190), (0.325,0.230))
-        self.type_rect_2 = ((0.355,0.190), (0.430,0.230))
+        self.type_rect_1 = ((0.255,0.189), (0.320,0.230))
+        self.type_rect_2 = ((0.360,0.189), (0.430,0.230))
         # Selectable Pokemon abilities rectangles
         self.abil_rect_1 = ((0.485,0.340), (0.61,0.385))
         self.abil_rect_2 = ((0.485,0.590), (0.61,0.635))
         self.abil_rect_3 = ((0.485,0.835), (0.61,0.880))
-        self.abil_rect_4 = ((0.485,0.635), (0.61,0.690))
+        self.abil_rect_4 = ((0.485,0.635), (0.61,0.675))
         # Poke ball rectangle
         self.ball_rect = ((0.69,0.620), (0.88,0.665))
+        self.ball_n_rect = ((0.890,0.620), (0.930,0.665))
+        # Backpacker
+        self.item_rect_1 = ((0.549,0.1270), (0.745,0.1770)) 
+        self.item_rect_2 = ((0.549,0.2035), (0.745,0.2535))
+        self.item_rect_3 = ((0.549,0.2800), (0.745,0.3300))
+        self.item_rect_4 = ((0.549,0.3565), (0.745,0.4065))
+        self.item_rect_5 = ((0.549,0.4330), (0.745,0.4830))
 
+        #Items table
+        self.tier_1_items = ['Restos',
+                        'Cascabel Concha']
+        self.tier_2_items = ['Vidasfera',
+                        'Cinta Eleccion',
+                        'Panuelo Eleccion',
+                        'Gafas Eleccion',
+                        'Periscopio']
+        self.tier_3_items = ['Banda Focus',
+                        'Cinta Experto',
+                        'Gafas Especiales',
+                        'Cinta Fuerte',
+                        'Lupa']
+        self.tier_4_items = ['Seguro Debilidad',
+                        'Seguro Fallo',
+                        'Chaleco Asalto',
+                        'Gafa Protectora',
+                        'Parasol Multiuso',
+                        'Casco Dentado']
+        self.tier_5_items = ['Baya Zanama',
+                        'Baya Ziuela',
+                        'Baya Zidra']
+
+        #Base Ball selection table
+        self.base_dive = ['Sandslash (Alolan Form)']
+        self.base_lux = ['Dugtrio (Alolan Form)',
+                         'Persian (Alolan Form)',
+                         'Marowak (Alolan Form)',
+                         'Weezing',
+                         'Stunfisk']                            
+        self.base_premier = ['Persian',
+                           'Mr. Mime',
+                           'Linoone']
+        self.base_dream = ['Porygon']
 
     def reset_run(self) -> None:
         """Reset in preparation for a new Dynamax Adventure."""
@@ -88,6 +129,8 @@ class MaxLairInstance():
         self.boss_matchups = pickle.load(open(self.boss_matchups_path, 'rb'))
         self.rental_matchups = pickle.load(open(self.rental_matchups_path, 'rb'))
         self.rental_scores = pickle.load(open(self.rental_scores_path, 'rb'))
+        
+        self.items = pickle.load(open(self.items_path, 'rb'))
         
     def reset_stage(self) -> None:
         """Reset after a battle."""
@@ -131,6 +174,8 @@ class MaxLairInstance():
                           (round(self.abil_rect_4[1][0]*w)+2,round(self.abil_rect_4[1][1]*h)+2), (0,255,255), 2)
             cv2.rectangle(img, (round(self.ball_rect[0][0]*w)-2,round(self.ball_rect[0][1]*h)-2),
                           (round(self.ball_rect[1][0]*w)+2,round(self.ball_rect[1][1]*h)+2), (0,0,255), 2)
+            cv2.rectangle(img, (round(self.ball_n_rect[0][0]*w)-2,round(self.ball_n_rect[0][1]*h)-2),
+                          (round(self.ball_n_rect[1][0]*w)+2,round(self.ball_n_rect[1][1]*h)+2), (0,0,255), 2)
         elif stage == 'battle':
             cv2.rectangle(img, (round(self.sel_rect_5[0][0]*w)-2,round(self.sel_rect_5[0][1]*h)-2),
                           (round(self.sel_rect_5[1][0]*w)+2,round(self.sel_rect_5[1][1]*h)+2), (0,255,0), 2)
@@ -138,6 +183,17 @@ class MaxLairInstance():
                           (round(self.type_rect_1[1][0]*w)+2,round(self.type_rect_1[1][1]*h)+2), (255,255,0), 2)
             cv2.rectangle(img, (round(self.type_rect_2[0][0]*w)-2,round(self.type_rect_2[0][1]*h)-2),
                           (round(self.type_rect_2[1][0]*w)+2,round(self.type_rect_2[1][1]*h)+2), (255,255,0), 2)
+        elif stage == 'backpacker':
+            cv2.rectangle(img, (round(self.item_rect_1[0][0]*w)-2,round(self.item_rect_1[0][1]*h)-2),
+                          (round(self.item_rect_1[1][0]*w)+2,round(self.item_rect_1[1][1]*h)+2), (0,255,0), 2)
+            cv2.rectangle(img, (round(self.item_rect_2[0][0]*w)-2,round(self.item_rect_2[0][1]*h)-2),
+                          (round(self.item_rect_2[1][0]*w)+2,round(self.item_rect_2[1][1]*h)+2), (0,255,0), 2)
+            cv2.rectangle(img, (round(self.item_rect_3[0][0]*w)-2,round(self.item_rect_3[0][1]*h)-2),
+                          (round(self.item_rect_3[1][0]*w)+2,round(self.item_rect_3[1][1]*h)+2), (0,255,0), 2)
+            cv2.rectangle(img, (round(self.item_rect_4[0][0]*w)-2,round(self.item_rect_4[0][1]*h)-2),
+                          (round(self.item_rect_4[1][0]*w)+2,round(self.item_rect_4[1][1]*h)+2), (0,255,0), 2)
+            cv2.rectangle(img, (round(self.item_rect_5[0][0]*w)-2,round(self.item_rect_5[0][1]*h)-2),
+                          (round(self.item_rect_5[1][0]*w)+2,round(self.item_rect_5[1][1]*h)+2), (0,255,0), 2)
 
         # Return the scaled and annotated image
         return img
@@ -313,7 +369,7 @@ class MaxLairInstance():
         # Construct arrays of text and values to display
         labels = ('Run #',
                   'Stage: ',
-                  'Battle :',
+                  'Battle: ',
                   'Lives: ',
                   'Pokemon: ',
                   'Opponent: ',
@@ -322,7 +378,8 @@ class MaxLairInstance():
                   'Pokemon caught: ',
                   'Shinies found: ',
                   'Base balls: ',
-                  'Legendary balls: ',
+                  'Boss balls: ',
+                  'Mode: ',
                   'Dynite Ore: ')
         values = (str(self.runs + 1)+' : '+str(self.boss),
                   self.stage,
@@ -334,8 +391,9 @@ class MaxLairInstance():
                   str(time_per_run),
                   str(self.caught_total),
                   str(self.shinies_found)+' (%0.2f'%shiny_percent+' %)',
-                  str(self.base_balls),
-                  str(self.legendary_balls),
+                  str(self.base_ball)+' : '+str(self.base_balls),
+                  str(self.legendary_ball)+' : '+str(self.legendary_balls),
+                  str(self.mode),
                   str(self.dynite_ore))
 
 
@@ -353,3 +411,93 @@ class MaxLairInstance():
             self.shot += 1
             screenshot = False
 
+# WIP Backpacker item selection
+
+    def read_selectable_item(self) -> List[str]:
+        """Return a list of available Pokemon names."""
+        # Fetch the image from the Switch output
+        image = self.get_frame()
+
+        # Get a list of Pokemon names present, depending on stage
+        items = []
+        itlist = []
+        items.append(self.read_text(image, self.item_rect_1, threshold=False, invert=True, language=None, segmentation_mode='--psm 8').strip())
+        items.append(self.read_text(image, self.item_rect_2, threshold=False, language=None, segmentation_mode='--psm 8').strip())
+        items.append(self.read_text(image, self.item_rect_3, threshold=False, language=None, segmentation_mode='--psm 8').strip())
+        items.append(self.read_text(image, self.item_rect_4, threshold=False, language=None, segmentation_mode='--psm 8').strip())
+        items.append(self.read_text(image, self.item_rect_5, threshold=False, language=None, segmentation_mode='--psm 8').strip())
+
+        # Identify the Pokemon based on its name and ability/types, where relevant
+        for i in range(len(items)):
+            itlist.append(self.identify_item(items[i]))
+            #item_list.append(items[i])
+            #print(str(items[i]))
+
+        # Return the list of Pokemon
+        return itlist
+
+    def identify_item(self,
+                         item: str) -> str:
+        """Match OCRed items to a hold item."""
+        text = item.replace('\n','')
+        best_match = None
+        match_value = 1000
+        for i in range(len(self.items)):
+            item_to_match = str(self.items[i])
+            distance = enchant.utils.levenshtein(text, item_to_match)
+            if distance < match_value:
+                match_value = distance
+                best_match = item_to_match
+        if match_value > len(text):
+            print('WARNING: could not find a good match for item: "'+text+'"')
+            pass
+        #print('OCRed item:\t'+text+'\nMatched to:\t'+best_match+' @ '+str(match_value)) # DEBUG
+        print(str(best_match))
+        return best_match
+
+    def value_items(self, listed_items) -> int:
+        selection = 0
+        val = 0
+        values = [0,0,0,0,0]
+        #Check for desired items on each slot
+        for i in range(len(listed_items)):
+            for j in range(len(self.tier_5_items)):
+                if self.tier_5_items[j] in listed_items[i]:
+                    values[i] = 1
+            for j in range(len(self.tier_4_items)):
+                if self.tier_4_items[j] in listed_items[i]:
+                    values[i] = 2
+            for j in range(len(self.tier_3_items)):
+                if self.tier_3_items[j] in listed_items[i]:
+                    values[i] = 3
+            for j in range(len(self.tier_2_items)):
+                if self.tier_2_items[j] in listed_items[i]:
+                    values[i] = 4
+            for j in range(len(self.tier_1_items)):
+                if self.tier_1_items[j] in listed_items[i]:
+                    values[i] = 5
+        #Look for the best valued item            
+        for i in range(len(values)):
+            if val < values[i]:
+                val = values[i]
+                selection = i
+        
+        return selection
+
+    def pokeball_selection(self) -> str:
+        self.base_ball = 'DEFAULT'
+        for i in range(len(self.base_dive)):
+                if str(self.opponent) in self.base_dive[i]:
+                    self.base_ball = 'Buceo'
+        for i in range(len(self.base_lux)):
+                if str(self.opponent) in self.base_lux[i]:
+                    self.base_ball = 'Lujo'
+        for i in range(len(self.base_premier)):
+                if str(self.opponent) in self.base_premier[i]:
+                    self.base_ball = 'Honor'
+        for i in range(len(self.base_dream)):
+                if str(self.opponent) in self.base_dream[i]:
+                    self.base_ball = 'Ensue'
+    
+
+        

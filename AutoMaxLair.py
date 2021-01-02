@@ -30,6 +30,8 @@ boss_matchup_LUT_path = config['pokemon_data_paths']['Boss_Matchup_LUT']
 rental_matchup_LUT_path = config['pokemon_data_paths']['Rental_Matchup_LUT']
 rental_pokemon_scores_path = config['pokemon_data_paths']['Rental_Pokemon_Scores']
 
+items_path = config['pokemon_data_paths']['Items']
+
 #Text strings on Max Lair Area
 detect_text = ('Adelante',          #Battle
                'mis objetos',       #Backpacker
@@ -85,7 +87,7 @@ def detect(inst) -> str:
     :type inst: MaxLairInstance
     """
     text = inst.read_text(inst.get_frame(), ((0, 0.6), (1, 1)), invert=True)
-    if str(detect_text[0]) in text:
+    if str(detect_text[0]) in text or str(battle_text[0]) in text:
         # Battle has started and the move selection screen is up
         inst.log('Battle starting...')
         return 'battle'
@@ -153,6 +155,7 @@ def battle(inst) -> str:
                     inst.pokemon = copy(inst.opponent)
                     inst.pokemon.name = 'Ditto'
                     inst.pokemon.PP = [5,5,5,5]
+                inst.pokeball_selection()
             # Handle the Dynamax timer
             if inst.dmax_timer == 0:
                 inst.dmax_timer = -1
@@ -188,7 +191,7 @@ def battle(inst) -> str:
                 inst.push_buttons((b'v', 1))
                 inst.move_index = (inst.move_index + 1) % 4
             inst.push_buttons((b'a', 1), (b'a', 1), (b'a', 1), (b'b', 1), (b'b', 1))
-            inst.pokemon.PP[inst.move_index] -= 1 if inst.opponent.ability != 'Pressure' else 2
+            inst.pokemon.PP[inst.move_index] -= 1 if inst.opponent.ability != 'Presion' else 2
         
 
 
@@ -226,7 +229,15 @@ def catch(inst):
 
 def backpacker(inst):
     """Choose an item from the backpacker."""
-    inst.push_buttons((b'0', 5), (b'a', 5))
+    inst.push_buttons((b'0', 5))
+    item_list = inst.read_selectable_item()
+    inst.display_results(log=False,screenshot=True)
+    slot = inst.value_items(item_list)
+    while slot > 0:
+        inst.push_buttons((b'v', 3))
+        slot -= 1
+    inst.push_buttons((b'a', 5))
+    inst.display_results(log=False,screenshot=True)
     inst.log('Detecting where the path led...')
     return 'detect'
 
@@ -336,7 +347,7 @@ def main_loop():
     # Create a Max Lair Instance object to store information about each run and the entire sequence of runs
     instance = MaxLairInstance(BOSS, (BASE_BALL, BASE_BALLS, LEGENDARY_BALL, LEGENDARY_BALLS), com, cap, threading.Lock(),threading.Event(), datetime.now(),
                                (boss_pokemon_path, rental_pokemon_path, boss_matchup_LUT_path, rental_matchup_LUT_path,
-                                rental_pokemon_scores_path), MODE, DYNITE_ORE, 'join')
+                                rental_pokemon_scores_path, items_path), MODE, DYNITE_ORE, 'join')
 
     # DEBUG overrides for starting the script mid-run
     # instance.pokemon = instance.rental_pokemon['Electabuzz']
